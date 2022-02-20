@@ -193,3 +193,120 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 24px;
     font-weight: 700;
 }
+
+/*Верстаем вторую страницу*/
+.section {
+    padding: 80px 0;
+}
+
+.section_header {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+   text-align: center;
+}
+
+.section_suptitle {
+    font-family: 'Kaushan Script';
+    font-size: 24px;
+    color: #333;
+}
+
+.section_title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+}
+
+.section_title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 30px auto;
+    background-color: #f38181;
+}
+
+.section_text {
+    font-size: 15px;
+    color: #999;
+}
+
+/*Работа с картинками (about)*/
+.about {
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_item {
+    width: 380px;
+    background-color: #95e1d3;
+    position: relative; /*Заставляет текст появиться сверху залики при наведений*/
+}
+
+.about_item:hover .about_img {
+    transform: translate3d(-10px, -10px, 0); /*Для смешения картинки при наведений*/
+}
+
+.about_item:hover .about_img img {
+    opacity: 0.3;
+}
+
+.about_item:hover .about_text {
+    opacity: 1;
+}
+
+.about_img {
+    background: linear-gradient(to bottom, #f38181, #fce38a);
+    transition: transform 0.1s linear; /*Для плавности движения картинки*/
+}
+
+.about_img img {
+    display: block;
+    transition: opacity 0.1s linear;
+}
+
+.about_text {
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+    position: absolute; /*Ставит текст по середине и сверху градиетна и картинки*/
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translate3d(0, -50%, 0); /*В момент наведения текст двигается с картинкой*/
+    transition: opacity 0.2s linear;
+}
+
+.statistics {
+    background-color: #95e1d3;
+}
+
+.stat {
+    display: flex;
+}
+
+.stat_item {
+    flex: 1 1 0;
+    border-left: 1px solid #b5eae0;
+    text-align: center;
+    color: #fff;
+    padding: 80px 25px;
+}
+
+.stat_item:last-child {
+    border-right: 1px solid #b5eae0;
+}
+
+.stat_num {
+    font-size: 72px;
+    font-weight: 700;
+}
+
+.stat_text {
+    font-size: 12px;
+}
